@@ -19,7 +19,7 @@ export default function RootLayout({
       <body className="bg-stone-200 dark:bg-darkBlue text-midnightBlue dark:text-slateGray min-h-screen flex flex-col">
         <Header />
 
-        <main className="pb-16 shrink grow basis-0">
+        <main className="shrink grow basis-0">
           {children}
         </main>
 

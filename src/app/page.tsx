@@ -5,13 +5,15 @@ import SocialLink from "@/components/SocialLink";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import Animation from "@/components/Animation";
 
 
 export default function Home() {
+
   return (
     <section>
       <Container>
-        <div className="h-5/6 flex pt-20">
+        <div className="flex h-3/4 justify-around items-center">
           <div className="">
             <div>
               <span className="text-xl">Olá, eu sou </span>
@@ -42,9 +44,9 @@ export default function Home() {
 
           </div>
 
-          <div className="illustration">
+          <Animation />
 
-          </div>
+
         </div>
 
 
