@@ -2,6 +2,9 @@
 
 import Link from "next/link";
 import { ArrowRight, Github, Linkedin, Mail, ExternalLink } from "lucide-react";
+import { projects } from "@/lib/projects";
+import Image from "next/image";
+import { Badge } from "@/components/badge";
 
 const Home = () => {
   return (
@@ -47,7 +50,7 @@ const Home = () => {
               </button>
             </Link>
             <Link href="/contato">
-              <button className="bg-background hover:bg-background/80 p-3 rounded-md cursor-pointer transition-all duration-300 ">
+              <button className="bg-background hover:bg-background/80 py-3 px-6 rounded-md cursor-pointer transition-all duration-300 border border-border ">
                 Fale Comigo
               </button>
             </Link>
@@ -80,6 +83,79 @@ const Home = () => {
             >
               <Mail size={24} />
             </a>
+          </div>
+
+          {/* Projects Preview */}
+
+          <div className="mt-16 pt-12 border-t border-border">
+            <p className="text-sm text-muted-foreground mb-6">
+              Confira alguns projetos destacados
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {projects.map((project) => (
+                <div
+                  key={project.id}
+                  className="group flex flex-col p-4 rounded-lg border border-border bg-secondary hover:bg-secondary hover:border-primary transition-all h-full hover:scale-102 "
+                >
+                  {/* Imagem com altura fixa */}
+                  <div className="w-full h-40 mb-4 shrink-0">
+                    <Image
+                      src={project.image}
+                      alt={`projeto ${project.title}`}
+                      width={150}
+                      height={150}
+                      className="w-full h-full object-cover rounded-lg"
+                    />
+                  </div>
+
+                  {/* Conteúdo do card com crescimento flexível */}
+                  <div className="flex flex-col grow text-left">
+                    <h3 className="font-semibold text-foreground mb-2">
+                      {project.title}
+                    </h3>
+
+                    <p className="text-sm text-muted-foreground mb-4 grow">
+                      {project.description}
+                    </p>
+
+                    <div className="space-x-1 mb-4">
+                      {project.stack.map((tech) => (
+                        <Badge key={tech}>{tech}</Badge>
+                      ))}
+                    </div>
+
+                    {/* <button className="flex items-center gap-1 p-3 rounded-md bg-primary hover:bg-primary/80 cursor-pointer transition-all duration-300">
+
+                    </button> */}
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-muted-foreground flex items-center gap-1 mt-auto hover:text-primary transition-all "
+                    >
+                      ver projeto
+                      <ExternalLink size={16} />
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* CTA Section */}
+            <div className="mt-16 p-8 rounded-lg border border-border bg-secondary">
+              <h2 className="text-2xl font-bold text-foreground mb-2">
+                Pronto para trabalhar junto?
+              </h2>
+              <p className="text-muted-foreground mb-6">
+                Vamos criar algo incrível em conjunto.
+              </p>
+              <Link href="/contato">
+                <button className="cursor-pointer border border-border p-2 rounded-md bg-primary">
+                  Envie uma Mensagem
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
