@@ -1,18 +1,28 @@
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
+import { AnimatedElement } from "@/components/animated-element";
 
 export const Hero = () => {
   return (
-    <section id="hero" className="relative">
+    <section
+      id="hero"
+      className="relative min-h-[calc(100vh-64px)] overflow-hidden"
+    >
       {/* Background Gradient */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-20 right-1/3 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
         <div className="absolute bottom-20 left-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
       </div>
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center">
-        {/* Avatar */}
+      <AnimatedElement
+        direction="up"
+        distance={100}
+        skew={3}
+        stagger={0.15}
+        className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center"
+      >
         <div className="mb-8 flex justify-center">
+          {/* Avatar */}
           <div className="w-32 h-32 rounded-full bg-linear-to-br from-primary to-accent p-1">
             <div className="w-full h-full rounded-full bg-background flex items-center justify-center">
               <span className="text-4xl">👨‍💻</span>
@@ -77,7 +87,7 @@ export const Hero = () => {
             <Mail size={24} />
           </a>
         </div>
-      </div>
+      </AnimatedElement>
     </section>
   );
 };

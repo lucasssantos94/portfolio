@@ -1,3 +1,4 @@
+import { AnimatedElement } from "@/components/animated-element";
 import { Badge } from "@/components/badge";
 import { projects } from "@/lib/projects";
 import { ExternalLink } from "lucide-react";
@@ -6,7 +7,13 @@ import Image from "next/image";
 export const Projects = () => {
   return (
     <section id="projects" className="mt-16 pt-12 border-t border-border">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center">
+      <AnimatedElement
+        direction="up"
+        delay={0.6}
+        distance={40}
+        skew={2}
+        className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center"
+      >
         <h2 className="text-3xl font-bold text-foreground mb-4">Projetos</h2>
         <p className="text-sm text-muted-foreground mb-6">
           Confira alguns projetos destacados
@@ -61,7 +68,7 @@ export const Projects = () => {
             </div>
           ))}
         </div>
-      </div>
+      </AnimatedElement>
     </section>
   );
 };
