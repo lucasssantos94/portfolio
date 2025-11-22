@@ -5,20 +5,16 @@ import { Menu, X } from "lucide-react";
 
 const navItems = [
   { label: "Home", id: "hero" },
-  { label: "Sobre", id: "/about" },
-  { label: "Projetos", id: "/projects" },
-  { label: "Certificados", id: "/certificates" },
-  { label: "Contato", id: "/contact" },
+  { label: "Sobre", id: "about" },
+  { label: "Projetos", id: "projects" },
+  { label: "Certificados", id: "certificates" },
+  { label: "Contato", id: "contact" },
 ];
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const handleScroll = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setIsOpen(false);
-    }
+  const handleScroll = (sectionId: string) => {
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
   };
 
   useEffect(() => {
@@ -78,6 +74,7 @@ export const Navbar = () => {
               <button
                 key={item.id}
                 className="block px-3 py-2 rounded-md text-base font-medium text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
+                onClick={() => handleScroll(item.id)}
               >
                 {item.label}
               </button>
