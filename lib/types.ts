@@ -6,3 +6,8 @@ export interface IProject {
   link: string;
   stack: string[];
 }
+
+export interface ISkill {
+  category: string;
+  items: string[];
+}
