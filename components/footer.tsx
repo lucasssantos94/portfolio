@@ -1,5 +1,7 @@
-import Link from "next/link";
+"use client";
+
 import { Github, Linkedin, Mail } from "lucide-react";
+import { handleScroll } from "@/lib/utils";
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -25,28 +27,28 @@ export const Footer = () => {
 
             <ul className="space-y-2 text-sm">
               <li>
-                <Link
-                  href="/sobre"
+                <button
+                  onClick={() => handleScroll("about")}
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Sobre
-                </Link>
+                </button>
               </li>
               <li>
-                <Link
-                  href="/projetos"
+                <button
+                  onClick={() => handleScroll("projects")}
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Projetos
-                </Link>
+                </button>
               </li>
               <li>
-                <Link
-                  href="/certificados"
+                <button
+                  onClick={() => handleScroll("certificates")}
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Certificados
-                </Link>
+                </button>
               </li>
             </ul>
           </div>
@@ -89,20 +91,6 @@ export const Footer = () => {
         <div className="border-t border-border pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
             <p>© {currentYear} Portfolio. Todos os direitos reservados.</p>
-            <div className="flex space-x-4 mt-4 md:mt-0">
-              <Link
-                href="/privacy"
-                className="hover:text-foreground transition-colors"
-              >
-                Privacidade
-              </Link>
-              <Link
-                href="/terms"
-                className="hover:text-foreground transition-colors"
-              >
-                Termos
-              </Link>
-            </div>
           </div>
         </div>
       </div>
