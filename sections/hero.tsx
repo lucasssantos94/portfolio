@@ -1,5 +1,4 @@
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
-import Link from "next/link";
 import { AnimatedElement } from "@/components/animated-element";
 import { handleScroll } from "@/lib/utils";
 

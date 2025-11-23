@@ -1,8 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { useEffect, useState, useRef } from "react";
+import { gsap } from "gsap";
+import { MorphSVGPlugin } from "gsap/MorphSVGPlugin";
 import { handleScroll } from "@/lib/utils";
+
+gsap.registerPlugin(MorphSVGPlugin);
 
 const navItems = [
   { label: "Home", id: "hero" },
@@ -15,25 +18,94 @@ const navItems = [
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const menuRef = useRef<HTMLDivElement>(null);
+  const linksRef = useRef<HTMLButtonElement[]>([]);
+  const iconRef = useRef<SVGSVGElement>(null);
+
+  const handleScrollMobile = (id: string) => {
+    setIsOpen(false);
+    handleScroll(id);
+  };
+
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
-    }
 
-    return () => {
+      gsap.to("#line1", {
+        duration: 0.4,
+        morphSVG: "M4 18 L20 4",
+        ease: "power3.inOut",
+      });
+
+      gsap.to("#line2", {
+        duration: 0.4,
+        opacity: 0,
+        ease: "power2.out",
+      });
+
+      gsap.to("#line3", {
+        duration: 0.4,
+        morphSVG: "M4 4 L20 18",
+        ease: "power3.inOut",
+      });
+
+      gsap.fromTo(
+        menuRef.current,
+        { x: 200, opacity: 0, filter: "blur(8px)" },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 0.6,
+          filter: "blur(0px)",
+          ease: "expo.out",
+        },
+      );
+
+      gsap.fromTo(
+        linksRef.current,
+        { x: 40, opacity: 0, y: 10 },
+        {
+          x: 0,
+          opacity: 1,
+          y: 0,
+          duration: 0.55,
+          stagger: 0.06,
+          ease: "expo.out",
+        },
+      );
+    } else {
       document.body.style.overflow = "auto";
-    };
+
+      gsap.to("#line1", {
+        duration: 0.4,
+        morphSVG: "M3 6h18",
+        ease: "power3.inOut",
+      });
+
+      gsap.to("#line2", {
+        duration: 0.4,
+        opacity: 1,
+        ease: "power2.out",
+      });
+
+      gsap.to("#line3", {
+        duration: 0.4,
+        morphSVG: "M3 18h18",
+        ease: "power3.inOut",
+      });
+    }
   }, [isOpen]);
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-border bg-background/20 backdrop-blur supports-backdrop-filter:bg-background/60">
+    <nav className="sticky top-0 z-60 backdrop-blur-lg border-b border-white/10 bg-background/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
+          {/* Logo */}
           <button
             onClick={() => handleScroll("hero")}
             className="flex items-center space-x-2 group"
           >
-            <div className="w-8 h-8 bg-linear-to-br from-primary to-accent rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-linear-to-br from-primary to-accent rounded-lg flex items-center justify-center shadow-sm shadow-primary/20">
               <span className="text-sm font-bold text-primary-foreground font-mono">
                 &lt;/&gt;
               </span>
@@ -43,36 +115,76 @@ export const Navbar = () => {
             </span>
           </button>
 
-          {/* Desktop menu */}
+          {/* Desktop */}
           <div className="hidden md:flex items-center space-x-1">
             {navItems.map((item) => (
               <button
                 onClick={() => handleScroll(item.id)}
                 key={item.id}
-                className="px-3 py-2 rounded-md text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors cursor-pointer"
+                className="px-3 py-2 rounded-md text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary transition-all cursor-pointer"
               >
                 {item.label}
               </button>
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-secondary"
+            className="md:hidden p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-secondary transition-all active:scale-95"
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            <svg
+              ref={iconRef}
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              className="stroke-current"
+            >
+              <path
+                id="line1"
+                d="M3 6h18"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
+              <path
+                id="line2"
+                d="M3 12h18"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
+              <path
+                id="line3"
+                d="M3 18h18"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
+            </svg>
           </button>
         </div>
 
-        {/* Mobile Menu */}
+        {/* MOBILE MENU */}
         {isOpen && (
-          <div className="md:hidden pb-4 space-y-1 absolute z-50 h-[calc(100vh-64px)] bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60 top-16 right-0 left-0">
-            {navItems.map((item) => (
+          <div
+            ref={menuRef}
+            className="
+              md:hidden absolute top-16 right-0 left-0 h-[calc(100vh-64px)]
+              bg-background backdrop-blur-2xl
+              border-l border-white/10 border-r border-b
+              p-6 z-55 flex flex-col space-y-4 shadow-[0_8px_30px_rgba(0,0,0,0.35)]
+            "
+          >
+            {navItems.map((item, index) => (
               <button
                 key={item.id}
-                className="block px-3 py-2 rounded-md text-base font-medium text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
-                onClick={() => handleScroll(item.id)}
+                ref={(el) => {
+                  if (el) linksRef.current[index] = el;
+                }}
+                onClick={() => handleScrollMobile(item.id)}
+                className="
+                  w-full text-left px-4 py-3 rounded-lg text-xl
+                  font-medium text-muted-foreground
+                  hover:text-foreground hover:bg-secondary/60
+                  transition-all backdrop-blur-xl
+                "
               >
                 {item.label}
               </button>
