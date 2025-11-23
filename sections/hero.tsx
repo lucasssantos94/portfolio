@@ -1,4 +1,11 @@
-import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
+import {
+  ArrowRight,
+  Download,
+  FileText,
+  Github,
+  Linkedin,
+  Mail,
+} from "lucide-react";
 import { AnimatedElement } from "@/components/animated-element";
 import { handleScroll } from "@/lib/utils";
 
@@ -88,6 +95,30 @@ export const Hero = () => {
             aria-label="Email"
           >
             <Mail size={24} />
+          </a>
+        </div>
+
+        {/* curriculum link */}
+        <div className="flex justify-center mt-12">
+          <a
+            href="/cv.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center gap-3 px-6 py-4 rounded-lg bg-linear-to-r from-primary/10 to-accent/10 border border-primary/20 hover:border-primary/40 text-foreground hover:text-primary transition-all duration-300 hover:scale-105 hover:shadow-xl backdrop-blur-sm"
+          >
+            <div className="flex items-center justify-center w-10 h-10 rounded-full bg-primary/20 group-hover:bg-primary/30 transition-all duration-300">
+              <FileText size={20} className="text-primary" />
+            </div>
+            <div className="text-left">
+              <div className="font-semibold text-sm">Visualizar Currículo</div>
+              <div className="text-xs text-muted-foreground group-hover:text-primary/80">
+                PDF - Abre em nova guia
+              </div>
+            </div>
+            <Download
+              size={16}
+              className="ml-2 text-primary group-hover:animate-bounce"
+            />
           </a>
         </div>
       </AnimatedElement>

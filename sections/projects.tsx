@@ -6,8 +6,8 @@ import Image from "next/image";
 
 export const Projects = () => {
   return (
-    <section id="projects" className="mt-16 pt-12 border-t border-border">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center">
+    <section id="projects" className="mt-16 pt-12 ">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center border-t border-border">
         <AnimatedElement
           direction="up"
           delay={0.1}
