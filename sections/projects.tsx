@@ -1,5 +1,6 @@
 import { AnimatedElement } from "@/components/animated-element";
 import { Badge } from "@/components/badge";
+import { TitleSection } from "@/components/title-section";
 import { projects } from "@/data/projects";
 import { ExternalLink } from "lucide-react";
 import Image from "next/image";
@@ -15,7 +16,7 @@ export const Projects = () => {
           skew={2}
           className="text-center mb-2"
         >
-          <h2 className="text-3xl font-bold text-foreground">Projetos</h2>
+          <TitleSection title="Projetos" />
         </AnimatedElement>
 
         <AnimatedElement
