@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import { handleScroll } from "@/lib/utils";
 
 const navItems = [
   { label: "Home", id: "hero" },
@@ -13,9 +14,6 @@ const navItems = [
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const handleScroll = (sectionId: string) => {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
-  };
 
   useEffect(() => {
     if (isOpen) {

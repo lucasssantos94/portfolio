@@ -1,6 +1,7 @@
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
 import { AnimatedElement } from "@/components/animated-element";
+import { handleScroll } from "@/lib/utils";
 
 export const Hero = () => {
   return (
@@ -46,17 +47,20 @@ export const Hero = () => {
 
         {/* CTA Buttons */}
         <div className="flex flex-col items-center sm:flex-row gap-4 justify-center mb-12">
-          <Link href="/projetos">
-            <button className="flex items-center gap-1 p-3 rounded-md bg-primary hover:bg-primary/80 cursor-pointer transition-all duration-300">
-              Ver Projetos
-              <ArrowRight size={20} />
-            </button>
-          </Link>
-          <Link href="/contato">
-            <button className="bg-background hover:bg-background/80 py-3 px-6 rounded-md cursor-pointer transition-all duration-300 border border-border ">
-              Fale Comigo
-            </button>
-          </Link>
+          <button
+            className="flex items-center gap-1 p-3 rounded-md bg-primary hover:bg-primary/80 cursor-pointer transition-all duration-300"
+            onClick={() => handleScroll("projects")}
+          >
+            Ver Projetos
+            <ArrowRight size={20} />
+          </button>
+
+          <button
+            className="bg-background hover:bg-background/80 py-3 px-6 rounded-md cursor-pointer transition-all duration-300 border border-border "
+            onClick={() => handleScroll("contact")}
+          >
+            Fale Comigo
+          </button>
         </div>
 
         {/* Social Links */}
