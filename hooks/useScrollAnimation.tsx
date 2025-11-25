@@ -58,6 +58,7 @@ export const useScrollAnimation = ({
             trigger: el,
             start: "top 85%",
             end: "bottom 40%",
+            once: true,
             toggleActions: "play none none reverse",
             scrub,
             anticipatePin: 0.5,

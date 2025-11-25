@@ -30,7 +30,7 @@ export const Hero = () => {
           {/* Avatar */}
           <div className="w-32 h-32 rounded-full bg-linear-to-br from-primary to-accent p-1">
             <div className="w-full h-full rounded-full bg-background flex items-center justify-center">
-              <span className="text-4xl">👨‍💻</span>
+              <span className="text-4xl">👨🏾‍💻</span>
             </div>
           </div>
         </div>
