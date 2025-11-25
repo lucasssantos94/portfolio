@@ -1,10 +1,10 @@
 "use client";
 
-import { About } from "@/sections/about";
-import { Hero } from "@/sections/hero";
-import { Projects } from "@/sections/projects";
-import { Skills } from "@/sections/skills";
-import { Contact } from "@/sections/contact";
+import { About } from "./_sections/about";
+import { Hero } from "./_sections/hero";
+import { Projects } from "./_sections/projects";
+import { Skills } from "./_sections/skills";
+import { Contact } from "./_sections/contact";
 
 const Home = () => {
   return (
