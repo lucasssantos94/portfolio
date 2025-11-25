@@ -4,10 +4,7 @@ import { AnimatedElement } from "@/components/animated-element";
 
 export const About = () => {
   return (
-    <section
-      id="about"
-      className="min-h-[calc(100vh-64px)] overflow-hidden relative"
-    >
+    <section id="about">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center border-t border-border">
         {/* Título */}
         <AnimatedElement direction="up" distance={60}>
