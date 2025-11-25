@@ -11,9 +11,9 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Portfolio | Desenvolvedor Fullstack",
+  title: "Portfolio | Lucas Santos",
   description:
-    "Portfolio profissional de desenvolvedor fullstack. Confira meus projetos, certificações e entre em contato.",
+    "Portfolio desenvolvedor fullstack. Confira meus projetos, certificações e entre em contato.",
   keywords: [
     "desenvolvedor",
     "fullstack",
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
     "next.js",
     "web development",
   ],
-  authors: [{ name: "Seu Nome" }],
-  creator: "Seu Nome",
-  publisher: "Seu Nome",
+  authors: [{ name: "Lucas Santos" }],
+  creator: "Lucas Santos",
+  publisher: "Lucas Santos",
   icons: {
     icon: [
       {
@@ -88,7 +88,10 @@ export default function RootLayout({
       <head>
         <link
           rel="canonical"
-          href={process.env.NEXT_PUBLIC_BASE_URL || "https://seu-portfolio.com"}
+          href={
+            process.env.NEXT_PUBLIC_BASE_URL ||
+            "https://portfolio-tau-fawn-33.vercel.app/"
+          }
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -102,15 +105,16 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Person",
-              name: "Seu Nome",
+              name: "Lucas Santos",
               url:
-                process.env.NEXT_PUBLIC_BASE_URL || "https://seu-portfolio.com",
+                process.env.NEXT_PUBLIC_BASE_URL ||
+                "https://portfolio-tau-fawn-33.vercel.app/",
               jobTitle: "Desenvolvedor Fullstack",
               sameAs: [
-                "https://github.com/seu-usuario",
-                "https://linkedin.com/in/seu-usuario",
+                "https://github.com/lucasssantos94",
+                "https://linkedin.com/in/lucas-silva-santos-439815a2/",
               ],
-              image: `${process.env.NEXT_PUBLIC_BASE_URL || "https://seu-portfolio.com"}/avatar.jpg`,
+              image: `${process.env.NEXT_PUBLIC_BASE_URL || "https://portfolio-tau-fawn-33.vercel.app/"}/avatar.jpg`,
             }),
           }}
         />
