@@ -8,13 +8,11 @@ import {
 } from "lucide-react";
 import { AnimatedElement } from "@/components/animated-element";
 import { handleScroll } from "@/lib/utils";
+import { Section } from "@/components/section";
 
 export const Hero = () => {
   return (
-    <section
-      id="hero"
-      className="relative min-h-[calc(100vh-64px)] overflow-hidden"
-    >
+    <Section id="hero" className="relative overflow-hidden">
       {/* Background Gradient */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-20 right-1/3 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
@@ -122,6 +120,6 @@ export const Hero = () => {
           </a>
         </div>
       </AnimatedElement>
-    </section>
+    </Section>
   );
 };

@@ -1,5 +1,6 @@
 import { AnimatedElement } from "@/components/animated-element";
 import { Badge } from "@/components/badge";
+import { Section } from "@/components/section";
 import { TitleSection } from "@/components/title-section";
 import { projects } from "@/data/projects";
 import { ExternalLink } from "lucide-react";
@@ -7,7 +8,7 @@ import Image from "next/image";
 
 export const Projects = () => {
   return (
-    <section id="projects" className="mt-4 ">
+    <Section id="projects">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center border-t border-border">
         <TitleSection title="Projetos" />
 
@@ -86,6 +87,6 @@ export const Projects = () => {
           </div>
         </AnimatedElement>
       </div>
-    </section>
+    </Section>
   );
 };

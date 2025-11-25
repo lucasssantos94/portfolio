@@ -4,10 +4,11 @@ import { TitleSection } from "@/components/title-section";
 import { Github, Linkedin, Mail } from "lucide-react";
 import { ContactForm } from "@/components/contact-form";
 import { AnimatedElement } from "@/components/animated-element";
+import { Section } from "@/components/section";
 
 export const Contact = () => {
   return (
-    <section id="contact">
+    <Section id="contact">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 border-t border-border">
         <TitleSection title="Vamos Conversar" />
 
@@ -104,6 +105,6 @@ export const Contact = () => {
           </AnimatedElement>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };

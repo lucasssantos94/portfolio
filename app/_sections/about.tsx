@@ -1,10 +1,11 @@
 import { TitleSection } from "@/components/title-section";
 import Image from "next/image";
 import { AnimatedElement } from "@/components/animated-element";
+import { Section } from "@/components/section";
 
 export const About = () => {
   return (
-    <section id="about">
+    <Section id="about">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center border-t border-border">
         {/* Título */}
 
@@ -55,6 +56,6 @@ export const About = () => {
           </AnimatedElement>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
