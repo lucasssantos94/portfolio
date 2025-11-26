@@ -23,7 +23,7 @@ export const Contact = () => {
         <div className="md:col-span-1 space-y-6">
           <AnimatedElement direction="left" distance={20} skew={5} delay={0.1}>
             <div className="p-6 rounded-lg border border-border bg-secondary group hover:scale-[1.02] transition-all duration-500">
-              <div className="flex gap-2 mb-4">
+              <div className="flex gap-2 mb-4 md:flex-col md:items-center lg:items-start lg:flex-row">
                 <div className="p-3 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-all">
                   <Mail
                     className="text-primary group-hover:scale-110 transition-transform"
@@ -31,7 +31,9 @@ export const Contact = () => {
                   />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground">Email</h3>
+                  <h3 className="font-semibold text-foreground md:text-center lg:text-left">
+                    Email
+                  </h3>
                   <a
                     href="mailto:lucas.dev94@email.com"
                     className="text-primary text-sm hover:underline"
@@ -45,7 +47,7 @@ export const Contact = () => {
 
           <AnimatedElement direction="left" distance={20} skew={5} delay={0.3}>
             <div className="p-6 rounded-lg border border-border bg-secondary group hover:scale-[1.02] transition-all duration-500">
-              <div className="flex items-center gap-2 mb-4">
+              <div className="flex items-center gap-2 mb-4 md:flex-col md:items-center lg:items-start lg:flex-row">
                 <div className="p-3 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-all">
                   <Linkedin
                     className="text-primary group-hover:scale-110 transition-transform"
@@ -53,12 +55,14 @@ export const Contact = () => {
                   />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground">LinkedIn</h3>
+                  <h3 className="font-semibold text-foreground md:text-center lg:text-left">
+                    LinkedIn
+                  </h3>
                   <a
                     href="https://www.linkedin.com/in/lucas-silva-santos-439815a2/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-primary text-sm hover:underline"
+                    className="text-primary text-sm hover:underline "
                   >
                     Visite meu perfil
                   </a>
@@ -69,7 +73,7 @@ export const Contact = () => {
 
           <AnimatedElement direction="left" distance={20} skew={5} delay={0.5}>
             <div className="p-6 rounded-lg border border-border bg-secondary group hover:scale-[1.02] transition-all duration-500">
-              <div className="flex gap-2 mb-4">
+              <div className="flex gap-2 mb-4 md:flex-col md:items-center lg:items-start lg:flex-row">
                 <div className="p-3 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-all">
                   <Github
                     className="text-primary group-hover:scale-110 transition-transform"
@@ -77,7 +81,9 @@ export const Contact = () => {
                   />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground">GitHub</h3>
+                  <h3 className="font-semibold text-foreground md:text-center lg:text-left">
+                    GitHub
+                  </h3>
                   <a
                     href="https://github.com/lucasssantos94"
                     target="_blank"
@@ -95,7 +101,7 @@ export const Contact = () => {
         <AnimatedElement
           direction="up"
           distance={60}
-          delay={0.2}
+          delay={0.5}
           className="md:col-span-2"
         >
           <div className="p-6 rounded-lg border border-border bg-secondary">
