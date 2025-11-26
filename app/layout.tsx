@@ -75,10 +75,10 @@ export const metadata: Metadata = {
       "https://lucassantos-portfolio.vercel.app",
     siteName: "Portfolio",
     title: "Portfolio | Desenvolvedor Fullstack",
-    description: "Portfolio profissional de desenvolvedor fullstack",
+    description: "Lucas Santos - Desenvolvedor Fullstack",
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_BASE_URL || "https://lucassantos-portfolio.vercel.app"}/og-image.jpg`,
+        url: `${process.env.NEXT_PUBLIC_BASE_URL || "https://lucassantos-portfolio.vercel.app"}/og-image.png`,
         width: 1200,
         height: 630,
         alt: "Portfolio Preview",
@@ -88,7 +88,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Portfolio | Desenvolvedor Fullstack",
-    description: "Portfolio profissional de desenvolvedor fullstack",
+    description: "Lucas Santos - Desenvolvedor Fullstack",
     images: [
       `${process.env.NEXT_PUBLIC_BASE_URL || "https://lucassantos-portfolio.vercel.app"}/og-image.jpg`,
     ],
