@@ -127,6 +127,23 @@ export default function RootLayout({
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
+        <meta
+          property="og:url"
+          content="https://lucassantos-portfolio.vercel.app/"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Portfolio | Desenvolvedor Fullstack"
+        />
+        <meta
+          property="og:description"
+          content="Portfolio desenvolvedor fullstack. Confira meus projetos, certificações e entre em contato."
+        />
+        <meta
+          property="og:image"
+          content="https://lucassantos-portfolio.vercel.app/og-image.png"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
