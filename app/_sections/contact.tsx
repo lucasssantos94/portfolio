@@ -105,6 +105,17 @@ export const Contact = () => {
           </AnimatedElement>
         </div>
       </div>
+
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-border">
+        <AnimatedElement direction="up" distance={40} delay={0.4}>
+          <div className="p-6 rounded-lg border border-border bg-secondary text-center mt-12">
+            <p className="text-muted-foreground">
+              Costumo responder mensagens em até{" "}
+              <span className="text-primary font-semibold">24 horas</span>
+            </p>
+          </div>
+        </AnimatedElement>
+      </div>
     </Section>
   );
 };
