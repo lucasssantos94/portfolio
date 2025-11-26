@@ -130,6 +130,12 @@ export const Navbar = () => {
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-secondary transition-all active:scale-95"
+            aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
+            aria-expanded={isOpen}
+            aria-controls="mobile-menu"
+            aria-haspopup="true"
+            aria-owns="mobile-menu"
+            aria-labelledby="mobile-menu"
           >
             <svg
               ref={iconRef}
