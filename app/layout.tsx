@@ -90,7 +90,7 @@ export const metadata: Metadata = {
     title: "Portfolio | Desenvolvedor Fullstack",
     description: "Lucas Santos - Desenvolvedor Fullstack",
     images: [
-      `${process.env.NEXT_PUBLIC_BASE_URL || "https://lucassantos-portfolio.vercel.app"}/og-image.jpg`,
+      `${process.env.NEXT_PUBLIC_BASE_URL || "https://lucassantos-portfolio.vercel.app"}/og-image.png`,
     ],
   },
   verification: {

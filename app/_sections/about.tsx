@@ -6,55 +6,60 @@ import { Section } from "@/components/section";
 export const About = () => {
   return (
     <Section id="about">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center border-t border-border">
-        {/* Título */}
+      {/* Título */}
 
-        <TitleSection title="Sobre Mim" />
+      <TitleSection title="Sobre Mim" />
 
-        {/* Conteúdo */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 mt-10 items-start">
-          {/* Texto */}
-          <AnimatedElement
-            direction="left"
-            distance={80}
-            stagger={0.2}
-            className="text-left text-muted-foreground flex flex-col gap-6 leading-relaxed"
-          >
-            <p>
-              Minha jornada na programação começou há pouco mais de um ano,
-              impulsionado pela curiosidade de entender como as coisas são
-              construídas na web. Aquele primeiro &quot;Hello World&quot; foi a
-              porta de entrada para um universo que nunca para de evoluir, e eu
-              me encontro nele.
-            </p>
+      {/* Conteúdo */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 mt-10 items-start">
+        {/* Texto */}
+        <AnimatedElement
+          direction="left"
+          distance={80}
+          stagger={0.2}
+          className="text-left text-muted-foreground flex flex-col gap-6 leading-relaxed"
+        >
+          <p>
+            Minha jornada na programação começou há pouco mais de um ano,
+            impulsionado pela curiosidade de entender como as coisas são
+            construídas na web. Aquele primeiro &quot;Hello World&quot; foi a
+            porta de entrada para um universo que nunca para de evoluir, e eu me
+            encontro nele.
+          </p>
 
-            <p>
-              Como desenvolvedor fullstack, tenho me dedicado a dominar tanto o
-              front-end quanto o back-end, transformando ideias em soluções
-              digitais tangíveis e funcionais. Meu foco está em escrever código
-              não apenas que funcione, mas que seja limpo, eficiente e acessível
-              — porque acredito que a verdadeira qualidade técnica está na
-              simplicidade e na capacidade de impactar positivamente a
-              experiência do usuário.
-            </p>
-          </AnimatedElement>
+          <p>
+            Como desenvolvedor fullstack, tenho me dedicado a dominar tanto o
+            front-end quanto o back-end, transformando ideias em soluções
+            digitais tangíveis e funcionais. Meu foco está em escrever código
+            não apenas que funcione, mas que seja limpo, eficiente e acessível —
+            porque acredito que a verdadeira qualidade técnica está na
+            simplicidade e na capacidade de impactar positivamente a experiência
+            do usuário.
+          </p>
+        </AnimatedElement>
 
-          {/* Imagem */}
-          <AnimatedElement
-            direction="right"
-            distance={40}
-            delay={0.15}
-            className="flex justify-center md:justify-end items-end"
-          >
-            <Image
-              src="/profile.jpeg"
-              alt="Profile"
-              width={300}
-              height={300}
-              className="rounded-full shadow-xl border border-border hover:scale-105 transition-transform duration-500"
-            />
-          </AnimatedElement>
-        </div>
+        {/* Imagem */}
+        <AnimatedElement
+          direction="right"
+          distance={60}
+          delay={0.4}
+          skew={-5}
+          className="flex justify-center md:justify-end items-end"
+        >
+          <Image
+            src="/profile.jpeg"
+            alt="Profile"
+            width={300}
+            height={300}
+            className="
+      rounded-full
+      shadow-[0_0_40px_rgba(0,0,0,0.25)]
+      border border-border
+      transition-transform duration-700 ease-[cubic-bezier(.22,1,.36,1)]
+      hover:scale-105 hover:rotate-1
+    "
+          />
+        </AnimatedElement>
       </div>
     </Section>
   );
