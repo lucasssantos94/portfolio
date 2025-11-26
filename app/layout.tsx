@@ -61,13 +61,13 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     url:
       process.env.NEXT_PUBLIC_BASE_URL ||
-      "https://lucassantos-portfolio.vercel.app/",
+      "https://lucassantos-portfolio.vercel.app",
     siteName: "Portfolio",
     title: "Portfolio | Desenvolvedor Fullstack",
     description: "Portfolio profissional de desenvolvedor fullstack",
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_BASE_URL || "https://lucassantos-portfolio.vercel.app/"}/og-image.jpg`,
+        url: `${process.env.NEXT_PUBLIC_BASE_URL || "https://lucassantos-portfolio.vercel.app"}/og-image.jpg`,
         width: 1200,
         height: 630,
         alt: "Portfolio Preview",
@@ -79,7 +79,7 @@ export const metadata: Metadata = {
     title: "Portfolio | Desenvolvedor Fullstack",
     description: "Portfolio profissional de desenvolvedor fullstack",
     images: [
-      `${process.env.NEXT_PUBLIC_BASE_URL || "https://lucassantos-portfolio.vercel.app/"}/og-image.jpg`,
+      `${process.env.NEXT_PUBLIC_BASE_URL || "https://lucassantos-portfolio.vercel.app"}/og-image.jpg`,
     ],
   },
   verification: {
@@ -107,7 +107,7 @@ export default function RootLayout({
           rel="canonical"
           href={
             process.env.NEXT_PUBLIC_BASE_URL ||
-            "https://portfolio-tau-fawn-33.vercel.app/"
+            "https://lucassantos-portfolio.vercel.app/"
           }
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -125,13 +125,13 @@ export default function RootLayout({
               name: "Lucas Santos",
               url:
                 process.env.NEXT_PUBLIC_BASE_URL ||
-                "https://portfolio-tau-fawn-33.vercel.app/",
+                "https://lucassantos-portfolio.vercel.app/",
               jobTitle: "Desenvolvedor Fullstack",
               sameAs: [
                 "https://github.com/lucasssantos94",
                 "https://linkedin.com/in/lucas-silva-santos-439815a2/",
               ],
-              image: `${process.env.NEXT_PUBLIC_BASE_URL || "https://portfolio-tau-fawn-33.vercel.app/"}/avatar.jpg`,
+              image: `${process.env.NEXT_PUBLIC_BASE_URL || "https://lucassantos-portfolio.vercel.app/"}/avatar.jpg`,
             }),
           }}
         />
