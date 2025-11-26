@@ -5,6 +5,7 @@ import { Github, Linkedin, Mail } from "lucide-react";
 import { ContactForm } from "@/components/contact-form";
 import { AnimatedElement } from "@/components/animated-element";
 import { Section } from "@/components/section";
+import { Toaster } from "sonner";
 
 export const Contact = () => {
   return (
@@ -103,6 +104,8 @@ export const Contact = () => {
               <ContactForm />
             </div>
           </AnimatedElement>
+
+          <Toaster position="bottom-center" richColors />
         </div>
       </div>
 
