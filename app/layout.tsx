@@ -20,6 +20,21 @@ export const metadata: Metadata = {
     "react",
     "next.js",
     "web development",
+    "portfolio",
+    "javascript",
+    "typescript",
+    "node.js",
+    "css",
+    "html",
+    "programação",
+    "projetos",
+    "certificações",
+    "contato",
+    "lucas santos",
+    "desenvolvimento web",
+    "frontend",
+    "backend",
+    "tecnologia",
   ],
   authors: [{ name: "Lucas Santos" }],
   creator: "Lucas Santos",
@@ -44,13 +59,15 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: process.env.NEXT_PUBLIC_BASE_URL || "https://seu-portfolio.com",
+    url:
+      process.env.NEXT_PUBLIC_BASE_URL ||
+      "https://lucassantos-portfolio.vercel.app/",
     siteName: "Portfolio",
     title: "Portfolio | Desenvolvedor Fullstack",
     description: "Portfolio profissional de desenvolvedor fullstack",
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_BASE_URL || "https://seu-portfolio.com"}/og-image.jpg`,
+        url: `${process.env.NEXT_PUBLIC_BASE_URL || "https://lucassantos-portfolio.vercel.app/"}/og-image.jpg`,
         width: 1200,
         height: 630,
         alt: "Portfolio Preview",
@@ -62,11 +79,11 @@ export const metadata: Metadata = {
     title: "Portfolio | Desenvolvedor Fullstack",
     description: "Portfolio profissional de desenvolvedor fullstack",
     images: [
-      `${process.env.NEXT_PUBLIC_BASE_URL || "https://seu-portfolio.com"}/og-image.jpg`,
+      `${process.env.NEXT_PUBLIC_BASE_URL || "https://lucassantos-portfolio.vercel.app/"}/og-image.jpg`,
     ],
   },
   verification: {
-    google: "google-site-verification-code", // Replace with your code
+    google: "8SUW8SYi1EO5OXBJoIBiy9KP6P0WafV5tVAtpqsgqFY",
   },
 };
 
