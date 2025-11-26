@@ -20,9 +20,8 @@ export const Contact = () => {
       </AnimatedElement>
 
       <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-        {/* LEFT CARDS */}
         <div className="md:col-span-1 space-y-6">
-          <AnimatedElement direction="left" distance={30}>
+          <AnimatedElement direction="left" distance={20} skew={5} delay={0.1}>
             <div className="p-6 rounded-lg border border-border bg-secondary group hover:scale-[1.02] transition-all duration-500">
               <div className="flex gap-2 mb-4">
                 <div className="p-3 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-all">
@@ -44,7 +43,7 @@ export const Contact = () => {
             </div>
           </AnimatedElement>
 
-          <AnimatedElement direction="left" distance={30}>
+          <AnimatedElement direction="left" distance={20} skew={5} delay={0.3}>
             <div className="p-6 rounded-lg border border-border bg-secondary group hover:scale-[1.02] transition-all duration-500">
               <div className="flex items-center gap-2 mb-4">
                 <div className="p-3 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-all">
@@ -68,7 +67,7 @@ export const Contact = () => {
             </div>
           </AnimatedElement>
 
-          <AnimatedElement direction="left" distance={30}>
+          <AnimatedElement direction="left" distance={20} skew={5} delay={0.5}>
             <div className="p-6 rounded-lg border border-border bg-secondary group hover:scale-[1.02] transition-all duration-500">
               <div className="flex gap-2 mb-4">
                 <div className="p-3 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-all">
