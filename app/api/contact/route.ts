@@ -58,13 +58,6 @@ export async function POST(req: Request) {
 
         </td>
       </tr>
-
-      <tr>
-        <td style="padding: 16px; font-size: 12px; text-align: center; color: #777; background: #0f0f0f;">
-          Este e-mail foi enviado automaticamente através do formulário do portfólio.
-        </td>
-      </tr>
-
     </table>
   </div>
 `,
